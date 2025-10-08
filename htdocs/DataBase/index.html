@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 0px solid black;
+            background-color: transparent;
+            transition: all 0.3s linear;
+            perspective: 1000px;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: start;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .table-container {
+            background: rgba(255, 255, 255, 0.2);
+            /* transparent layer */
+            backdrop-filter: blur(8px);
+            /* blur only background */
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            position: relative;
+        }
+        #ll{
+            position: absolute;
+            top: 50px;
+            left: 150px;
+            content: "";
+            width: 0px;
+            height: 0px;
+            background-color: #ff00ff;
+            z-index: -2;
+            box-shadow: 0px 0px 15px 10px #ff00ff;
+        }
+
+
+
+
+
+
+
+        table {
+            border: 2px solid black;
+            width: calc(100% - 100px);
+            padding: 3px 20px;
+            background-color: #006eff4d;
+            
+
+
+        }
+
+
+
+
+        td {
+            width: 25%;
+            background-color: transparent;
+            text-align: center;
+        }
+
+
+        td input {
+            width: 80%;
+            font-size: 20px;
+            text-align: center;
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="submit"] {
+
+            padding: 6px 8px;
+            background: #26f0a2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="submit"]:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            /* 3D effect */
+
+            background: #66f712;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+
+    <div id="main" class="table-container">
+        <div id="ll"></div>
+    <table border='3'>
+        <tr>
+            <th> Si_no</th>
+            <th> User name </th>
+            <th> Password </th>
+            <th> UPDATE </th>
+        </tr>
+        <tr>
+            <td>
+                <form action='#' method='post'>
+                    <input type='text' value=' 1  ' name='sino' id=''>
+            </td>
+            <td><input type='text' value='akash  ' name='Uname' id=''></td>
+            <td><input type='text' value=' pass ' name='Pass' id=''></td>
+            <td><input type='submit' name='update' value='Update' readonly>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action='#' method='post'>
+                    <input type='text' value=' 1  ' name='sino' id=''>
+            </td>
+            <td><input type='text' value='akash  ' name='Uname' id=''></td>
+            <td><input type='text' value=' pass ' name='Pass' id=''></td>
+            <td><input type='submit' name='update' value='Update'>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action='#' method='post'>
+                    <input type='text' value=' 1  ' name='sino' id=''>
+            </td>
+            <td><input type='text' value='akash  ' name='Uname' id=''></td>
+            <td><input type='text' value=' pass ' name='Pass' id=''></td>
+            <td><input type='submit' name='update' value='Update'>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action='#' method='post'>
+                    <input type='text' value=' 1  ' name='sino' id=''>
+            </td>
+            <td><input type='text' value='akash  ' name='Uname' id=''></td>
+            <td><input type='text' value=' pass ' name='Pass' id=''></td>
+            <td><input type='submit' onmouse name='update' value='Update'>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td enterkeyhint=""> hello</td>
+        </tr>
+    </table>
+
+</div>
+<script>
+    var ll = document.getElementById('ll')
+    document.getElementById("main").addEventListener('mouseenter',(e)=>{
+        console.log(e)
+        let x = e.x;
+        let y = e.y;
+        console.log(x,y)
+        ll.style.top = `${y}px`
+        ll.style.left = `${x}px`
+
+
+    })
+</script>
+
+</body>
+
+</html>

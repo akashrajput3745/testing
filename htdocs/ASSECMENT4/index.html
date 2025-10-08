@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with PHP Pages</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        /* Main section */
+        .main-section {
+            margin-top: 60px; /* space for navbar */
+            width: 100%;
+            height: calc(100vh - 60px);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#" onclick="loadPage('QA1.php')">QA1</a>
+        <a href="#" onclick="loadPage('QA2.php')">QA2</a>
+        <a href="#" onclick="loadPage('QB1.php')">QB1</a>
+        <a href="#" onclick="loadPage('QB2.php')">QB2</a>
+        <a href="#" onclick="loadPage('QC1.php')">QC1</a>
+        <a href="#" onclick="loadPage('QC2.php')">QC2</a>
+    </div>
+
+    <div class="main-section">
+        <iframe id="displayFrame" src="QA1.php"></iframe> <!-- default page -->
+    </div>
+
+    <script>
+        function loadPage(page) {
+            document.getElementById('displayFrame').src = page;
+        }
+    </script>
+
+</body>
+</html>

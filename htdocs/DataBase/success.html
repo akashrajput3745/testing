@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hacker Demo — Simple</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #070707;
+    font-family: "Courier New", monospace;
+    color: #8cff9a;
+  }
+  .card {
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+    max-width: 920px;
+    width: 92%;
+  }
+  .label {
+    display:inline-block;
+    background: #ff3366;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight:700;
+    margin-bottom: 12px;
+    letter-spacing: .6px;
+  }
+  .message {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight:700;
+    margin: 14px 0;
+    color: #ffb86b;
+  }
+  .demo-text {
+    font-size: 18px;
+    background: rgba(255,255,255,0.02);
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px dashed rgba(255,184,107,0.15);
+    color: #ffd2a6;
+    margin-top: 12px;
+  }
+  .disclaimer {
+    margin-top: 14px;
+    color: #9fffbf;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+  .disclaimer strong { color:#fff; }
+</style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Hacker themed demo">
+    <div class="label">DEMO — Harmless</div>
+    <div class="message">For security awareness / demo only</div>
+
+    <div class="demo-text" aria-live="polite">
+      <!-- The dramatic line below is intentionally shown as a demo message.
+           This page does NOT capture or transmit any credentials. -->
+      congratulations your id and password successful send to attackers system
+    </div>
+
+    <div class="disclaimer">
+      <strong>Important:</strong> This is a simulated message for demonstration purposes only. <br>
+      <em>No data was captured or transmitted.</em> Do not use real credentials on demo pages.
+    </div>
+  </div>
+</body>
+</html>

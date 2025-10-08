@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Registration Form</title>
+    <style>
+        :root{
+            --bg:#0f1724;
+            --card:#0b1220;
+            --accent:#6ee7b7;
+            --muted:#97a0b3;
+            --glass: rgba(255,255,255,0.04);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            background:
+                radial-gradient(1200px 600px at 10% 10%, rgba(110,231,183,0.06), transparent 8%),
+                radial-gradient(900px 400px at 90% 90%, rgba(99,102,241,0.04), transparent 6%),
+                var(--bg);
+            color:#e6eef8;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:32px;
+        }
+
+        .card{
+            width:100%;
+            max-width:760px;
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border:1px solid rgba(255,255,255,0.04);
+            border-radius:12px;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+            overflow:hidden;
+            display:grid;
+            grid-template-columns: 1fr;
+            gap:0;
+        }
+
+        .panel{
+            padding:28px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+        }
+
+        .brand{
+            display:flex;
+            gap:12px;
+            align-items:center;
+            margin-bottom:18px;
+        }
+        .logo{
+            width:48px;height:48px;border-radius:10px;
+            background:linear-gradient(135deg,var(--accent),#6366f1);
+            display:inline-grid;place-items:center;
+            font-weight:700;
+            color:#071124;
+            box-shadow: 0 4px 18px rgba(110,231,183,0.12), inset 0 -6px 16px rgba(255,255,255,0.05);
+        }
+        h1{margin:0;font-size:20px}
+        p.lead{margin:6px 0 0;font-size:13px;color:var(--muted)}
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+            margin-top:12px;
+        }
+
+        .field{
+            display:flex;
+            flex-direction:column;
+        }
+        label{
+            font-size:13px;
+            color:var(--muted);
+            margin-bottom:6px;
+        }
+        input[type="text"], input[type="number"], select {
+            background:var(--glass);
+            border:1px solid rgba(255,255,255,0.04);
+            padding:10px 12px;
+            border-radius:8px;
+            color:inherit;
+            font-size:15px;
+            outline:none;
+            transition:box-shadow .12s, border-color .12s;
+        }
+        input:focus, select:focus{
+            box-shadow:0 4px 20px rgba(99,102,241,0.08);
+            border-color:rgba(99,102,241,0.5);
+        }
+
+        .row{display:flex;gap:12px}
+        .row .field{flex:1}
+        .helper{font-size:12px;color:var(--muted);margin-top:6px}
+
+        .actions{
+            display:flex;
+            gap:12px;
+            align-items:center;
+            margin-top:8px;
+        }
+        button.primary{
+            background:linear-gradient(90deg,var(--accent),#60a5fa);
+            color:#071124;
+            border:none;
+            padding:10px 16px;
+            border-radius:10px;
+            font-weight:600;
+            cursor:pointer;
+            box-shadow: 0 8px 30px rgba(99,102,241,0.12);
+        }
+        button.ghost{
+            background:transparent;
+            border:1px solid rgba(255,255,255,0.06);
+            color:var(--muted);
+            padding:8px 12px;
+            border-radius:10px;
+            cursor:pointer;
+        }
+
+        @media (max-width:720px){
+            .card{grid-template-columns:1fr; padding:0}
+            .panel{padding:20px}
+            .brand{gap:10px}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card" role="region" aria-labelledby="formTitle">
+        <div class="panel">
+            <div class="brand">
+                <div class="logo" aria-hidden="true">S</div>
+                <div>
+                    <h1 id="formTitle">Student Registration</h1>
+                    <p class="lead">Quickly add a student record — ID, full name and class.</p>
+                </div>
+            </div>
+
+            <form id="studentForm" method="post" action="#">
+                <div class="row">
+                    <div class="field">
+                        <label for="studentId">Student ID</label>
+                        <input id="studentId" name="studentId" type="text" inputmode="numeric" pattern="\d+" placeholder="e.g. 2025001" required aria-required="true" />
+                        <div class="helper">Numeric ID — numbers only.</div>
+                    </div>
+
+                    <div class="field">
+                        <label for="studentClass">Class</label>
+                        <select id="studentClass" name="studentClass" required aria-required="true">
+                            <option value="" disabled selected>Select class</option>
+                            <option>Grade 1</option>
+                            <option>Grade 2</option>
+                            <option>Grade 3</option>
+                            <option>Grade 4</option>
+                            <option>Grade 5</option>
+                            <option>High School</option>
+                            <option>University</option>
+                        </select>
+                        <div class="helper">Choose class from the list.</div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="studentName">Full Name</label>
+                    <input id="studentName" name="studentName" type="text" placeholder="e.g. Jane Doe" required aria-required="true" minlength="2" />
+                    <div class="helper">Enter first and last name.</div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="primary">Save Student</button>
+                    <button type="reset" class="ghost">Reset</button>
+                    <div style="flex:1"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<!-- Student table (insert where indicated) -->
+<style>
+    /* Table styles that match the form/card look */
+    .data-card{
+        margin-top:18px;
+        width:100%;
+        max-width:760px;
+    }
+
+    .students-table {
+        width:100%;
+        border-collapse:collapse;
+        margin-top:8px;
+        font-size:14px;
+    }
+
+    .students-table thead th{
+        text-align:left;
+        font-weight:600;
+        font-size:13px;
+        color:var(--muted);
+        padding:12px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+        border-bottom:1px solid rgba(255,255,255,0.04);
+    }
+
+    .students-table tbody td{
+        padding:12px;
+        border-bottom:1px solid rgba(255,255,255,0.03);
+        vertical-align:middle;
+    }
+
+    .students-table tbody tr:hover{
+        background: linear-gradient(90deg, rgba(99,102,241,0.03), rgba(110,231,183,0.02));
+    }
+
+    .students-table .id{
+        font-variant-numeric: tabular-nums;
+        color:#dffcf0;
+        width:140px;
+    }
+
+    .students-table .name{
+        font-weight:600;
+    }
+
+    .students-table .class{
+        color:var(--muted);
+        width:180px;
+    }
+
+    .student-actions{
+        display:flex;
+        gap:8px;
+        justify-content:flex-end;
+    }
+
+    /* smaller button variants that reuse existing classes */
+    .primary.sm{
+        padding:6px 10px;
+        border-radius:8px;
+        font-size:13px;
+        box-shadow: 0 6px 18px rgba(99,102,241,0.08);
+    }
+    .ghost.sm{
+        padding:6px 10px;
+        border-radius:8px;
+        font-size:13px;
+    }
+
+    @media (max-width:640px){
+        .students-table thead th:nth-child(4),
+        .students-table tbody td:nth-child(4){
+            display:none;
+        }
+    }
+</style>
+
+<div class="card data-card" role="region" aria-labelledby="tableTitle">
+    <div class="panel">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div>
+                <h1 id="tableTitle" style="font-size:16px;margin:0">Registered Students</h1>
+                <p class="lead" style="margin:6px 0 0">Recent records — ID, full name and class.</p>
+            </div>
+        </div>
+
+        <div style="overflow:auto">
+            <table class="students-table" role="table" aria-labelledby="tableTitle">
+                <thead>
+                    <tr>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Class</th>
+                        <th scope="col" style="text-align:right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="id">2025001</td>
+                        <td class="name">Jane Doe</td>
+                        <td class="class">Grade 1</td>
+                        <td>
+                            <div class="student-actions" aria-hidden="false">
+                                <button type="button" class="primary sm">Edit</button>
+                                <button type="button" class="ghost sm">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="id">2025002</td>
+                        <td class="name">Samuel Green</td>
+                        <td class="class">Grade 3</td>
+                        <td>
+                            <div class="student-actions">
+                                <button type="button" class="primary sm">Edit</button>
+                                <button type="button" class="ghost sm">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="id">2025003</td>
+                        <td class="name">Aisha Khan</td>
+                        <td class="class">High School</td>
+                        <td>
+                            <div class="student-actions">
+                                <button type="button" class="primary sm">Edit</button>
+                                <button type="button" class="ghost sm">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="id">2025004</td>
+                        <td class="name">Liam Smith</td>
+                        <td class="class">University</td>
+                        <td>
+                            <div class="student-actions">
+                                <button type="button" class="primary sm">Edit</button>
+                                <button type="button" class="ghost sm">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

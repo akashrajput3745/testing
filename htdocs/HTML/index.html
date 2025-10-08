@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: 10px; padding: 2px; border: 1px solid black; display: inline-block;" class="main">
+        <h4>List of indian statea with thier capital</h4>
+        <ol id="sd_df">
+        </ol>
+    </div>
+    <div style="margin: 10px; padding: 2px; border: 1px solid black; display: inline-block;" class="table1">
+        <table border="1">
+            <tr>
+                <th rowspan="2">Item No.</th>
+                <th rowspan="2">Item Name</th>
+                <th colspan="2"> Price</th>
+            </tr>
+            <tr>
+
+                <td>Rs.</td>
+                <td>Paise</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Programing in Python</td>
+                <td>148</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Programing in Java</td>
+                <td>1234</td>
+                <td>6543</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="margin: 10px; padding: 2px; border: 0px solid black; display: inline-block;" class="table2">
+        <table style="background-color: rgb(0, 0, 0);" border="1">
+            <thead style="background-color: white;">
+                <tr>
+                    <td colspan="2">
+                        <h1>This is Header</h1>
+                    </td>
+                </tr>
+            </thead>
+            <tbody style=" background-color: white; height: 300px;">
+                <tr style=" vertical-align: top; height: 20%; top: 2px; ">
+                    <td style="  width: 30%; ">look at the box is empty but you can fuck hear</td>
+                    <td>look at the box is empty but you can fuck hear</td>
+                </tr>
+
+            </tbody>
+            <tfoot style="background-color: white;">
+                <tr>
+                    <td colspan="2">
+                        <h1>This is Header</h1>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div style="margin: 10px; padding: 2px; border: 0px solid black; display: inline-block;" class="table2">
+        <table style="border-collapse: collapse;" border="3">
+            <thead>
+                <tr>
+                    <td colspan="2">
+                        <h1>This is Header</h1>
+                    </td>
+                </tr>
+            </thead>
+            <tbody style=" height: 300px;">
+                <tr style=" vertical-align: top; height: 20%; top: 2px; ">
+                    <td style="  width: 30%; ">look at the box is empty but you can fuck hear</td>
+                    <td>look at the box is empty but you can fuck hear</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <h1>This is Header</h1>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div style="margin: 10px; padding: 2px; border: 0px solid black; display: inline-block;" class="form1">
+        <form action="">
+            <fieldset>
+                <h4>Operting system infomaiton</h4>
+                <label for="">Enter your name</label> <input type="text"> <br><br>
+                <label for="">Password</label> <input type="password"> <br><br>
+                <label for="">Which of the Operating system have you used</label> <br><br>
+                <input type="checkbox" name="" id="" value="Linux"> Linux
+                <input type="checkbox" name="" id="" value="Linux"> windows
+                <input type="checkbox" name="" id="" value="Linux"> mac os <br><br>
+                <label for="">Which of the Operating system do you like the best</label> <br><br>
+                <input type="radio" name="like" id="" value="Linux"> Linux
+                <input type="radio" name="like" id="" value="Linux"> windows
+                <input type="radio" name="like" id="" value="Linux"> mac os
+                <br>
+                <br>
+                you have complteded the form <button><u>S</u>ing up</button>
+            </fieldset>
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div style="margin: 10px; padding: 2px; border: 0px solid black; display: inline-block;" class="table2">
+            <div style="border: 1px solid black; background-color: yellow;" class="div1">
+                <div class="div2" style="padding: 10px; margin: 20px; border: 1px solid black; background-color: red;">
+                    <div style=" margin: 10px; height: 20px; width: 70px;  border: 1px solid black; background-color: rgb(255, 255, 255);"
+                        class="chid">akash</div>
+                    <div style="margin: 10px; height: 20px; width: 70px; border: 1px solid black; background-color: rgb(255, 255, 255);"
+                        class="chid">nitin</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <marquee behavior="" direction="">akash and nitin</marquee>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+<script>
+    var sf = document.getElementById("sd_df")
+    const states = [
+        { state: "dely", capital: "new dely" },
+        { state: "haryana", capital: "Chandigarh" },
+        { state: "Gujarat", capital: "Gandhinagae" },
+        { state: "Rajsthan", capital: "Jaipur" },
+        { state: "Maharashtra", capital: "Mumbai" },
+        { state: "Uttarpradesh", capital: "Lucknow" }
+    ]
+    let html;
+    states.forEach((item) => {
+        console.log(item.state)
+        console.log(item.capital)
+        html = `
+        <li>${item.state}
+                <ul><li>${item.capital}</li></ul>
+            </li>
+        `
+        sf.innerHTML += html
+    })
+</script>
+
+</html>

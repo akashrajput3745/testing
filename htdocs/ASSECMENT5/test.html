@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Winner Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Competition Winner Info</h1>
+        <!-- Form to submit competition name -->
+        <form action="fetch_winner.php" method="POST">
+            <input type="text" name="competition_name" placeholder="Enter Competition Name" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Result Area -->
+        <div id="result">
+            <!-- PHP will fill this area -->
+            <img src="https://via.placeholder.com/100" alt="Student Face">
+            <h3>John Doe</h3>
+            <p>Class: BCA-1</p>
+            <p>Rank: 1</p>
+        </div>
+    </div>
+</body>
+</html>

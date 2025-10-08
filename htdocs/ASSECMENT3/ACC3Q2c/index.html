@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just i </title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(45deg, #d975f5, #d21e84);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background: #212121;
+
+        }
+
+        /* From Uiverse.io by gharsh11032000 */
+        .form-container {
+            width: 400px;
+            background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+            border: 2px solid transparent;
+            padding: 32px 24px;
+            font-size: 14px;
+            font-family: inherit;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            border-radius: 16px;
+        }
+
+        .form-container button:active {
+            scale: 0.95;
+        }
+
+        .form-container .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .form-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #717171;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .form-container .form-group input {
+            width: 90%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            background-color: transparent;
+            border: 1px solid #414141;
+        }
+
+        .form-container .form-group textarea {
+            width: 90%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            resize: none;
+            color: #fff;
+            height: 96px;
+            border: 1px solid #414141;
+            background-color: transparent;
+            font-family: inherit;
+        }
+
+        .form-container .form-group input::placeholder {
+            opacity: 0.5;
+        }
+
+        .form-container .form-group input:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container .form-group textarea:focus {
+            outline: none;
+            border-color: #e81cff;
+        }
+
+        .form-container .form-submit-btn {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            align-self: flex-start;
+            font-family: inherit;
+            color: #717171;
+            font-weight: 600;
+            width: 40%;
+            background: #313131;
+            border: 1px solid #414141;
+            padding: 12px 16px;
+            font-size: inherit;
+            gap: 8px;
+            margin-top: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .form-container .form-submit-btn:hover {
+            background-color: #fff;
+            border-color: #fff;
+        }
+
+
+
+
+
+
+
+
+        /* From Uiverse.io by gharsh11032000 */
+        .card {
+            width: 400px;
+            height: 200px;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            border-radius: 8px;
+            color: white;
+            overflow: hidden;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            cursor: pointer;
+        }
+
+        .card-content {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+        }
+
+        .card-content .card-title {
+            font-size: 20px;
+
+            color: inherit;
+
+        }
+
+        .card-content .card-para {
+            color: inherit;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        .card:hover {
+            transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            z-index: 1;
+        }
+
+        .card:hover:before {
+            transform: translateX(-100%);
+        }
+
+        .card:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            z-index: 1;
+        }
+
+        .card:hover:after {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- From Uiverse.io by gharsh11032000 -->
+    <div class="form-container">
+        <form class="form">
+            <div class="form-group">
+                <label for="email">Student Name</label>
+                <input type="text" id="str1" name="email" required="">
+            </div>
+            <div class="form-group">
+                <label for="email">Scholl Name</label>
+                <input type="text" id="str2" name="email" required="">
+            </div>
+            <div class="form-group">
+                <label for="textarea">Write your Greet messeg Hear</label>
+                <textarea name="textarea" id="smg" rows="10" cols="50" required="">          </textarea>
+            </div>
+            <span class="form-submit-btn" onclick="send()">Submit</span>
+        </form>
+    </div>
+    <div class="result_area" id="demo">
+
+    </div>
+
+    <script>
+        async function send() {
+            console.log("hello");
+            let str1 = document.getElementById("str1").value;
+            let str2 = document.getElementById("str2").value;
+            let smg = document.getElementById("smg").value;
+            let data = { str1, str2 };
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function () {
+                console.log(this.readyState, this.status);
+                if (this.status == 200 && this.readyState == 4) {
+                    console.log("   hi ")
+                    console.log(this.responseText)
+                    document.getElementById("demo").innerHTML = ` <div class="card">
+            <div class="card-content">
+                <p class="card-title">${this.responseText}
+                </p>
+                <p class="card-para">.</p>
+            </div>
+        </div>`;
+                }
+            }
+            http.open("POST", "index1.php", true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+
+            http.send("str1=" + str1 + "&str2=" + str2 + "&smg=" + smg);
+        }
+    </script>
+
+
+</body>
+
+</html>

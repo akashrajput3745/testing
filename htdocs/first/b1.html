@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just i </title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(45deg, #6db3f2, #1e69d2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        form {
+            max-width: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            /* flex-direction: row; */
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 40px;
+            background-color: aqua;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.2);
+
+        }
+
+        form input {
+            width: 150px;
+            height: 20px;
+            border: 1px solid rgb(83, 184, 207);
+            border-radius: 5px;
+            margin: 10px;
+
+            /* flex-grow: inherit; */
+        }
+
+        .button {
+            width: 80%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #6db3f2;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="server.php" method="post">
+        <input type="text" name="ip1" id="ip1" placeholder="Enter First value">
+        <input type="text" name="ip2" id="ip2" placeholder="Enter Secound value">
+        <br>
+        <span onclick="fatc()" class="button">Try</span>
+    </form>
+    <div class="result_area" id="area">
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
