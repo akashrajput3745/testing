@@ -1,0 +1,147 @@
+.box{
+  height:auto;
+  width:50%;
+  margin:20px;
+  box-shadow:0px 0px 10px black;
+}
+.box .container{
+	height:auto;
+	width:auto;
+	margin:20px;
+	background-color:white;
+}
+.block {
+  color: #fff;
+  font-size:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:5px;
+  margin-top:10px;
+}
+.block1 { background-color: #4dc0e2; height: 100px; }
+.block2 { background-color: #5cd2c6; height: 100px; }
+.block3 { background-color: #5cd2c6; height: 200px; }
+.block4 { background-color: #4dc0e2; height: 90px; }
+.block5 { background-color: #5cd2c6; height: 90px; }
+.block6 { background-color: #4dc0e2; height: 305px; }
+.block7 { background-color: #5cd2c6; height: 95px; }
+.block8 { background-color: #4dc0e2; height: 95px; }   
+.block9 { background-color: #5cd2c6; height: 95px; }
+
+.box1{
+  height:auto;
+  width:80%;
+  margin:20px;
+  box-shadow:0px 0px 10px black;
+}
+.d-flex{
+  height:auto;
+  width:auto;
+  margin:5px;
+  background-color:white;
+}
+.sidebar {
+  width: 220px;
+  height: 450px;
+  background: #37474F;
+  color: #fff;
+}
+.sidebar .nav-link {
+  color: #b0bec5;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-bottom:1px solid white;
+}
+.sidebar .nav-link:hover {
+  background-color: #263238;
+  color: #fff;
+}
+.sidebar-header {
+  height:45px;
+  font-size: 20px;
+  background: #263238;
+  color: #fff;
+  text-align:center;
+  border-bottom: 1px solid #263238;
+}
+.header-bar {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 48px;
+}
+.header-bar .user {
+  margin-left: 16px;
+  color: #263238;
+  font-weight: 500;
+}
+
+.box2{
+  height:auto;
+  width:80%;
+  margin:20px;
+  padding:10px;
+  box-shadow:0px 0px 10px black;
+}
+.navbar{
+  margin-left:50px;
+  font-size:20px;
+}
+.nav-item a:hover{
+ border-bottom:2px solid red;
+}
+.navbar1{
+  margin-left:10px;
+  font-size:15px;
+}
+.nav-item1{
+  margin-left:20px;
+}
+.nav-item1 a:hover{
+ border-bottom:2px solid red;
+}
+
+.box3{
+  height:auto;
+  width:80%;
+  margin:20px;
+  padding:10px;
+  box-shadow:0px 0px 10px black;
+}
+
+.sidebar1 {
+  height:auto;
+  background: #1ccacf;
+  color: white; 
+  border-left:5px solid black;
+}
+.nav-item a{
+  color:white;
+}
+.line{
+  width:100%;
+  margin-bottom:50px ;
+  border-bottom:5px solid #1ccacf;
+}
+.button{
+  height:30px;
+  width:80px;
+  border:none;
+  color:white;
+  background-color:#1ccacf;
+  position:absolute;
+  margin-top:-20px;
+  margin-left:260px;
+}
+.line1{
+  width:100%;
+  margin-top:20px;
+  margin-bottom:20px;
+  border-bottom:5px solid #1ccacf;
+}
+
+
